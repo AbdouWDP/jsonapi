@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=Tajawal:wght@400;500;700;800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(to left,#03045E, #9D4EDD)
+}
+main{
+    width: 95%;
+    margin: auto;
+    height: 1000px;
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+.content-side{
+    background-color: #E9ECEF;
+    height: 85em
+}
+.profile-side{
+    height: 100%;
+    background-color: transparent;
+    position: relative;
+}
+.profiles{
+    width: 90%;
+    height: 50em;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.user{
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-left: 15px;
+    border-radius: 100px;
+    cursor: pointer;
+}
+.user:active{
+    outline: 3px solid orangered
+}
+.user:hover{
+    background-color: #dad8d8
+}
+.user .username{
+    font-weight: 600;
+    font-size: 22px;
+    font-family: "rubik";
+    letter-spacing: 0.7px;
+}
+.information{
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.user-info{
+    width: 90%;
+    background-color: white;
+    height: 100px;
+    overflow: auto;
+    margin-top: 15px;
+    border-radius: 5px;
+    padding-left: 10px;
+    box-shadow: 0 5px 10px #333;
+}
+.user-info .user-title{
+    font-family: "tajawal";
+    font-weight: 500;
+    border-bottom: 2px solid #778DA9;
+    width: 99%;
+}
+.user-info .user-body{
+    font-family: "rubik";
+    font-weight: 400;
+    margin-top: 5px
+}
+@media only screen and (max-width: 600px){
+    main{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+    }
+    .profile-side{
+        height: 50%;
+        margin-top: 40px;
+    }
+    .profiles{
+        height: 100%;
+        gap: 10px
+    }
+    .content-side{
+        height: auto;
+    }
+    .user{
+        width: 100%;
+        height: 400px;
+    }
+    .information{
+        flex-flow: row wrap;
+    }
+    .user-info{
+        width: 100%;
+        height: 250px;
+    }
+    .user-title{
+        font-weight: 700;
+    }
+}
